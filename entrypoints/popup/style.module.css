@@ -1,0 +1,61 @@
+:global(:root) {
+  --bg-color: #0d0e10;
+  --card-bg: #1e2024;
+  --card-hover-bg: #25282d;
+  --border-color: #2e323b;
+  --text-primary: #ececed;
+  --text-secondary: #9fa1a7;
+  --accent-color: #00e595;
+  --accent-glow: rgba(0, 229, 149, 0.15);
+  --accent-text: #041d14;
+  --danger-color: #ff4d4f;
+  --font-family: "Outfit", "Inter", system-ui, -apple-system, sans-serif;
+
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:global(#root) {
+  width: 380px;
+  height: 500px;
+  margin: 0;
+  padding: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+:global(body) {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+:global(::-webkit-scrollbar) {
+  width: 6px;
+}
+
+:global(::-webkit-scrollbar-track) {
+  background: transparent;
+}
+
+:global(::-webkit-scrollbar-thumb) {
+  background: #2e323b;
+  border-radius: 4px;
+}
+
+:global(::-webkit-scrollbar-thumb:hover) {
+  background: #3e4452;
+}

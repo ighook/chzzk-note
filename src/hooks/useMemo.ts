@@ -66,6 +66,11 @@ export function useMemos() {
     setMemos([]);
   }, []);
 
+  const importMemos = useCallback(async (nextMemos: MemoItem[]) => {
+    await memoStorage.setValue(nextMemos);
+    setMemos(nextMemos);
+  }, []);
+
   useEffect(() => {
     loadMemos();
   }, [loadMemos]);
@@ -77,6 +82,7 @@ export function useMemos() {
     addMemo,
     deleteMemo,
     updateMemo,
+    importMemos,
     clearMemos,
   };
 }
